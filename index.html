@@ -1,0 +1,129 @@
+<!doctype html>
+<html class="page" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bank's corporate portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page__body">
+  <header class="page-header">
+    <div class="container page-header__container">
+      <a class="page-header__logo-link">
+        <img src="./img/logo.png" alt="Логотип компании." class="page-header__logo-image" width="512" height="512">
+      </a>
+      <a href="tel:+71234567890" class="page-header__phone">+7 (123) 456-78-90</a>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="container page-main__container">
+      <h1 class="visually-hidden">Обработка формы</h1>
+      <nav class="page-menu">
+        <h2>Меню</h2>
+        <ul class="page-menu__list">
+          <li class="page-menu__item">
+            <a href="#" class="page-menu__link">Пункт 1</a>
+          </li>
+          <li class="page-menu__item">
+            <a href="#" class="page-menu__link">Пункт 1</a>
+          </li>
+          <li class="page-menu__item">
+            <a href="#" class="page-menu__link">Пункт 1</a>
+          </li>
+          <li class="page-menu__item">
+            <a href="#" class="page-menu__link">Пункт 1</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-search">
+        <label for="search" class="visually-hidden">Поиск по сайту</label>
+        <input id="search" name="search" class="page-search__input" placeholder="Поиск">
+      </div>
+      <div class="page-content">
+        <form action="#" class="page-form" method="post">
+          <table>
+            <thead>
+              <tr>
+                <th>ФИО</th>
+                <th>Должность</th>
+                <th>Возраст</th>
+                <th>Компетенции</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <label for="name" class="visually-hidden">Введите ФИО сотрудника</label>
+                  <input type="text" id="name" name="name" class="page-content__name" minlength="1">
+                </td>
+                <td>
+                  <label for="position" class="visually-hidden">Укажите должность сотрудника</label>
+                  <select id="position" name="position" class="page-content__position">
+                    <option value="Аналитик">Аналитик</option>
+                    <option value="Менеджер" selected>Менеджер</option>
+                    <option value="Программист">Программист</option>
+                    <option value="Юрист">Юрист</option>
+                  </select>
+                </td>
+                <td>
+                  <label for="age" class="visually-hidden">Укажите возраст сотрудника</label>
+                  <input type="number" id="age" name="age" class="page-content__age" min="14" max="110">
+                </td>
+                <td>
+                  <label for="competence" class="visually-hidden"></label>
+                  <textarea id="competence" cols="40" name="competence"></textarea>
+                </td>
+                <td>
+                  <button class="page-content__row-button" title="Удалить строку" type="button">-</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="page-form__button page-form__button--send" type="submit">Отправить</button>
+          <button class="page-form__button page-form__button--add" type="button">Добавить</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container page-footer__container">
+      <a class="page-footer__logo-link">
+        <img src="./img/logo.png" alt="Логотип компании." class="page-footer__logo-image" width="512" height="512">
+      </a>
+      <ul class="page-footer__socials-list">
+        <li class="page-footer__socials-item">
+          <a href="https://vk.com/" class="page-footer__socials-link" target="_blank">
+            <span class="visually-hidden">Вконтакте</span>
+            <svg class="page-footer__socials-icon" width="25" height="25" aria-hidden="true"
+                 focusable="false">
+              <use xlink:href="./img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="page-footer__socials-item">
+          <a href="https://ok.ru/" class="page-footer__socials-link" target="_blank">
+            <span class="visually-hidden">Одноклассники</span>
+            <svg class="page-footer__socials-icon" width="25" height="25" aria-hidden="true"
+                 focusable="false">
+              <use xlink:href="./img/sprite.svg#ok"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="page-footer__socials-item">
+          <a href="https://tlgrm.ru/" class="page-footer__socials-link" target="_blank">
+            <span class="visually-hidden">Телеграм</span>
+            <svg class="page-footer__socials-icon" width="26" height="26" aria-hidden="true"
+                 focusable="false">
+              <use xlink:href="./img/sprite.svg#reddit"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <a href="tel:+71234567890" class="page-footer__phone">+7 (123) 456-78-90</a>
+    </div>
+  </footer>
+</body>
+</html>
