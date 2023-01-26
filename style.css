@@ -99,17 +99,61 @@ img {
 
 .page-menu {
   height: calc(100vh - 146px);
-  padding: 75px 0;
+  padding: 100px 10px 0;
   border-right: 2px solid var(--color-black);
   border-left: 2px solid var(--color-black);
 }
 
+.page-menu__list {
+  margin: 0;
+  padding: 0 0 0 15px;
+  list-style: none;
+}
+
+.page-menu__item {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.page-menu__item:last-child {
+  margin-bottom: 0;
+}
+
+.page-menu__item::before {
+  content: "-";
+  position: absolute;
+  left: -10px;
+}
+
+.page-menu__item:hover,
+.page-menu__item:focus {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.page-menu__link {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .page-search {
   width: 100%;
-  padding: 20px 0;
+  padding: 15px 0;
   text-align: center;
   border-bottom: 2px solid var(--color-black);
   border-right: 2px solid var(--color-black);
+}
+
+input[id="search"] {
+  padding: 5px 10px;
+  border: 1px solid var(--color-black);
+  border-radius: 10px;
+}
+
+input[id="search"]:hover,
+input[id="search"]:focus {
+  outline: 1px solid var(--color-black);
+  outline-offset: 1px;
 }
 
 .page-content {
@@ -120,8 +164,125 @@ img {
   border-right: 2px solid var(--color-black);
 }
 
+.page-content form {
+  width: 100%;
+}
+
+.page-content table {
+  display: grid;
+  grid-template-columns:
+    minmax(150px, 20%)
+    minmax(150px, 20%)
+    minmax(150px, 20%)
+    minmax(150px, 40%)
+    min-content;
+  min-width: 100%;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  border-left: 1px solid gray;
+  border-right: none;
+}
+
+.page-content thead,
+.page-content tbody,
+.page-content tr {
+  display: contents;
+}
+
+.page-content th,
+.page-content td {
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.page-content th:last-child,
+.page-content td:last-child {
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  margin: auto;
+}
+
+.page-content th {
+  position: sticky;
+  top: 0;
+  text-align: left;
+  border-top: 1px solid gray;
+}
+
+input[id="name"],
+input[id="age"],
+select[id="position"],
+textarea[id="competence"] {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid var(--color-black);
+}
+
+select[id="position"] {
+  padding: 4px 0;
+}
+
+textarea[id="competence"] {
+  height: 65px;
+  resize: none;
+}
+
+input[id="name"]:hover,
+input[id="name"]:focus,
+input[id="age"]:hover,
+input[id="age"]:focus,
+select[id="position"]:hover,
+select[id="position"]:focus,
+textarea[id="competence"]:hover,
+textarea[id="competence"]:focus {
+  outline: 1px solid var(--color-black);
+  outline-offset: 1px;
+}
+
+.page-form__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 40px;
+}
+
+.page-form__button,
+.page-content__row-button {
+  padding: 5px 20px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.page-form__button:hover,
+.page-form__button:focus,
+.page-content__row-button:hover,
+.page-content__row-button:focus {
+  opacity: 0.7;
+}
+
+.page-content__row-button {
+  padding: 0 10px;
+}
+
 .page-menu h2 {
+  position: relative;
   margin: 0 0 30px;
+}
+
+.page-menu h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-black);
 }
 
 .page-footer {

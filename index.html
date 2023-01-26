@@ -50,6 +50,7 @@
                 <th>Должность</th>
                 <th>Возраст</th>
                 <th>Компетенции</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -73,7 +74,7 @@
                 </td>
                 <td>
                   <label for="competence" class="visually-hidden"></label>
-                  <textarea id="competence" cols="40" name="competence"></textarea>
+                  <textarea id="competence" cols="30" rows="5" name="competence"></textarea>
                 </td>
                 <td>
                   <button class="page-content__row-button" title="Удалить строку" type="button">-</button>
@@ -81,8 +82,10 @@
               </tr>
             </tbody>
           </table>
-          <button class="page-form__button page-form__button--send" type="submit">Отправить</button>
-          <button class="page-form__button page-form__button--add" type="button">Добавить</button>
+          <div class="page-form__button-wrapper">
+            <button class="page-form__button page-form__button--send" type="submit">Отправить</button>
+            <button class="page-form__button page-form__button--add" type="button">Добавить</button>
+          </div>
         </form>
       </div>
     </div>
