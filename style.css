@@ -80,6 +80,7 @@ img {
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: min-content 1fr;
+  height: 100%;
 }
 
 .page-menu {
@@ -98,8 +99,7 @@ img {
 }
 
 .page-menu {
-  height: calc(100vh - 146px);
-  padding: 100px 10px 0;
+  padding: 100px 10px;
   border-right: 2px solid var(--color-black);
   border-left: 2px solid var(--color-black);
 }
@@ -162,6 +162,7 @@ input[id="search"]:focus {
   width: 100%;
   padding: 50px;
   border-right: 2px solid var(--color-black);
+  overflow-y: scroll;
 }
 
 .page-content form {
@@ -211,35 +212,36 @@ input[id="search"]:focus {
   position: sticky;
   top: 0;
   text-align: left;
+  background-color: var(--color-white);
   border-top: 1px solid gray;
 }
 
-input[id="name"],
-input[id="age"],
-select[id="position"],
-textarea[id="competence"] {
+input[name="name"],
+input[name="age"],
+select[name="position"],
+textarea[name="competence"] {
   width: 100%;
   padding: 5px 10px;
   border: 1px solid var(--color-black);
 }
 
-select[id="position"] {
+select[name="position"] {
   padding: 4px 0;
 }
 
-textarea[id="competence"] {
+textarea[name="competence"] {
   height: 65px;
   resize: none;
 }
 
-input[id="name"]:hover,
-input[id="name"]:focus,
-input[id="age"]:hover,
-input[id="age"]:focus,
-select[id="position"]:hover,
-select[id="position"]:focus,
-textarea[id="competence"]:hover,
-textarea[id="competence"]:focus {
+input[name="name"]:hover,
+input[name="name"]:focus,
+input[name="age"]:hover,
+input[name="age"]:focus,
+select[name="position"]:hover,
+select[name="position"]:focus,
+textarea[name="competence"]:hover,
+textarea[name="competence"]:focus {
   outline: 1px solid var(--color-black);
   outline-offset: 1px;
 }
