@@ -1,9 +1,7 @@
-const form = document.querySelector('#message')
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
+const form = document.querySelector('#report');
+const sendJSON = function() {
   let output = {};
+
   new FormData( form ).forEach(( value, key ) => {
     if ( Object.prototype.hasOwnProperty.call( output, key ) ) {
       let current = output[ key ];
@@ -16,17 +14,28 @@ form.addEventListener('submit', (e) => {
     }
   });
 
-  fetch('transform.php', {
-    method: 'POST',
-    body: JSON.stringify(output),
-    headers: {
-      'Content-Type': 'application/json; charset=UTF-8'
-    }
-  })
-  .then((response) => {
-    console.log(response);
-  });
+  let xhr = new XMLHttpRequest();
+  let url = "database.php";
 
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log(this.responseText);
+      console.log(true);
+    } else {
+      console.log(false);
+    }
+  };
+
+  let data = JSON.stringify(output);
+
+  xhr.send(data);
   console.log(JSON.stringify(output));
+};
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  sendJSON();
   e.target.reset();
 });

@@ -42,7 +42,7 @@
         <input id="search" name="search" class="page-search__input" placeholder="Поиск">
       </div>
       <div class="page-content">
-        <form id="message" action="transform.php" method="post">
+        <form id="report">
           <table>
             <thead>
               <tr>
@@ -57,12 +57,12 @@
               <tr>
                 <td>
                   <label aria-label="Введите ФИО сотрудника">
-                    <input type="text" name="name" minlength="5" required>
+                    <input type="text" id="name" name="name" minlength="5" required>
                   </label>
                 </td>
                 <td>
                   <label aria-label="Укажите должность сотрудника">
-                    <select name="position">
+                    <select name="position" id="position">
                       <option value="Аналитик">Аналитик</option>
                       <option value="Менеджер" selected>Менеджер</option>
                       <option value="Программист">Программист</option>
@@ -72,12 +72,12 @@
                 </td>
                 <td>
                   <label aria-label="Укажите возраст сотрудника">
-                    <input type="number" name="age" min="14" max="110" required>
+                    <input type="number" id="age" name="age" min="14" max="110" required>
                   </label>
                 </td>
                 <td>
                   <label aria-label="Укажите необходимые компетенции">
-                    <textarea cols="30" rows="5" name="competence" required></textarea>
+                    <textarea cols="30" rows="5" id="competence" name="competence" required></textarea>
                   </label>
                 </td>
                 <td>
