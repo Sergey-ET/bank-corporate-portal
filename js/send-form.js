@@ -1,4 +1,5 @@
 const form = document.querySelector('#report');
+
 const sendJSON = function() {
   let output = {};
 
